@@ -128,3 +128,35 @@ Responsive UI design
 
 Data persistence and synchronization
 
+### 1. **Login Screen** 🔐
+- Secure user authentication with Firebase
+- Email/password login and registration
+- Input validation and error handling
+- Automatic login persistence
+
+### 2. **Main Weather Dashboard** 🌡️
+- **Current Weather Display**: Temperature, conditions, location
+- **Weather Details**: Humidity, wind speed, feels-like temperature
+- **Quick Actions**: One-tap access to all features
+- **User Info**: Display logged-in user email
+- **Real-time Data**: Live weather updates from WeatherAPI.com
+
+### 3. **Locations Screen** 📍
+- **Multiple Cities**: Johannesburg, Cape Town, Pretoria, Durban
+- **Temperature Overview**: Current temps for all locations
+- **Easy Navigation**: Quick switching between cities
+- **My Locations**: Personalized location management
+
+### 4. **10-Day Forecast** 📅
+- **Extended Forecast**: 10-day weather predictions
+- **Daily Overview**: High/low temperatures per day
+- **Visual Layout**: Clean, easy-to-read forecast display
+- **Detailed Planning**: Perfect for trip planning
+
+### 5. **Air Quality Index** 🌫️
+- **AQI Monitoring**: Real-time air quality data
+- **Health Recommendations**: Safety tips based on AQI levels
+- **Color-coded Alerts**: Visual indicators for air quality
+- **Moderate Level Handling**: Special warnings for sensitive groups
+
+
