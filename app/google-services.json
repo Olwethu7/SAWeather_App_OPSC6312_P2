@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "658158344225",
+    "project_id": "saweather-7bc09",
+    "storage_bucket": "saweather-7bc09.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658158344225:android:982614bfe9f3d059ef2b60",
+        "android_client_info": {
+          "package_name": "com.yourteam.saweather"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwPWXpjWoc1cNgfO6eInd3XESR8E-qF1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
