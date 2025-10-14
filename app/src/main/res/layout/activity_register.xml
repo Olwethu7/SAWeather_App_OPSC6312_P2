@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#4A90E2"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saweather"
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="name"
+        android:hint="@string/full_name"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:background="@drawable/edittext_background"
+        android:minHeight="56dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="email"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:padding="16dp"
+        android:background="@drawable/edittext_background"
+        android:minHeight="56dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:background="@drawable/edittext_background"
+        android:minHeight="56dp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/confirmPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:autofillHints="password"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:background="@drawable/edittext_background"
+        android:minHeight="56dp"
+        android:textColor="@color/black"/>
+
+    <!-- Fixed Button - Better contrast and proper sizing -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="200dp"
+        android:minHeight="48dp"
+        android:text="@string/register"
+        android:background="#1976D2"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp" />
+
+    <!-- Fixed TextView - Better contrast and larger touch target -->
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:gravity="center"
+        android:text="@string/already_have_an_account_login_here"
+        android:textColor="#E3F2FD"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackground" />
+
+</LinearLayout>

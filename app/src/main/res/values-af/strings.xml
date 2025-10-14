@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SAWeer</string>
+    <string name="welcome">Welkom</string>
+    <string name="login">Teken In</string>
+    <string name="register">Registreer</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wagwoord</string>
+    <string name="confirm_password">Bevestig Wagwoord</string>
+    <string name="full_name">Volle Naam</string>
+    <string name="have_account">Het jy reeds \'n rekening? Teken hier in</string>
+    <string name="no_account">Het jy nie \'n rekening nie? Registreer hier</string>
+    <string name="humidity">Humiditeit</string>
+    <string name="wind">Wind</string>
+    <string name="change_language">Verander Taal</string>
+    <string name="change_location">Verander Ligging</string>
+    <string name="logout">Teken Uit</string>
+    <string name="select_language">Kies Taal</string>
+    <string name="saweather">SAWeer</string>
+    <string name="already_have_an_account_login_here">Het jy reeds \'n rekening? Teken hier in</string>
+    <string name="dont_have_an_account_register_here">Het jy nie \'n rekening nie? Registreer hier</string>
+
+    <string name="english">Engels</string>
+    <string name="zulu">Zoeloe (isiZulu)</string>
+    <string name="afrikaans">Afrikaans</string>
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">iSAWeather</string>
+    <string name="welcome">Sawubona</string>
+    <string name="login">Ngena ngemvume</string>
+    <string name="register">Bhalisa</string>
+    <string name="email">I-imeyili</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="confirm_password">Qinisekisa Iphasiwedi</string>
+    <string name="full_name">Igama eliphelele</string>
+    <string name="have_account">Usenayo i-akhawunti? Ngena ngemvume lapha</string>
+    <string name="no_account">Awunawo i-akhawunti? Bhalisa lapha</string>
+    <string name="humidity">Umswakama</string>
+    <string name="wind">Umoya</string>
+    <string name="change_language">Shintsha ulimi</string>
+    <string name="change_location">Shintsha indawo</string>
+    <string name="logout">Phuma</string>
+    <string name="select_language">Khetha ulimi</string>
+    <string name="saweather">iSAWeather</string>
+    <string name="already_have_an_account_login_here">Usenayo i-akhawunti? Ngena ngemvume lapha</string>
+    <string name="dont_have_an_account_register_here">Awunawo i-akhawunti? Bhalisa lapha</string>
+
+    <string name="english">IsiNgisi</string>
+    <string name="zulu">IsiZulu</string>
+    <string name="afrikaans">IsiBhunu</string>
+
+</resources>
