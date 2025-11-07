@@ -1,136 +1,73 @@
-SAWeather App - OPSC6312 Part 2 App Overview SAWeather is a fully functional weather application built with Kotlin in Android Studio. The app provides users with accurate weather information while offering a seamless and intuitive user experience.
+# SAWeather App - OPSC6312 Final POE
 
-Key Features Implemented (Part 2) Authentication System User Registration: Secure account creation with encrypted password storage
+![SAWeather Banner](https://via.placeholder.com/800x200/2196F3/FFFFFF?text=SAWeather+-+South+African+Weather+Companion)
 
-User Login: Authentication using email and password credentials
+A fully functional weather application built with Kotlin that provides accurate weather information with a seamless and intuitive user experience. Designed specifically for South African users with multi-language support and real-time weather updates.
 
-Firebase Integration: All user data securely stored in Firebase (NoSQL database)
+## 🌟 Features
 
-User Settings Customizable app preferences and user configurations
+### 🔐 Authentication System
+- **User Registration**: Secure account creation with encrypted password storage
+- **User Login**: Authentication using email and password credentials
+- **Single Sign-On (SSO)**: Google and Firebase authentication integration
+- **Firebase Integration**: All user data securely stored in Firebase (NoSQL database)
 
-Profile management capabilities
+### ⚙️ User Settings & Profile
+- Customizable app preferences and user configurations
+- Profile management capabilities
+- Multi-language support (English, isiZulu, Afrikaans)
+- Theme customization options
 
-Weather Features Real-time weather data display
+### 🌤️ Weather Features
+- **Real-time Weather Data**: Current conditions and forecasts
+- **Location-based Weather**: Automatic and manual location detection
+- **10-Day Forecast**: Extended weather predictions for planning
+- **Air Quality Index**: Real-time AQI monitoring with health recommendations
+- **Multiple Cities**: Johannesburg, Cape Town, Pretoria, Durban support
 
-Location-based weather information
+### 📱 User Interface
+- **Login Screen**: Secure authentication with Firebase
+- **Main Weather Dashboard**: Current temperature, conditions, and location
+- **Locations Screen**: Multi-city temperature overview and management
+- **Forecast Display**: 10-day weather predictions with daily highs/lows
+- **AQI Monitoring**: Color-coded air quality alerts and safety tips
 
-User-friendly and visually appealing interface
+### 🔄 Advanced Features (POE Implementation)
+- **Offline Mode with Sync**: Weather data caching with RoomDB and synchronization
+- **Real-time Push Notifications**: Firebase Cloud Messaging for weather alerts
+- **Multi-language Support**: English, isiZulu, and Afrikaans localization
+- **Blob Storage**: Weather icons and user avatars stored in cloud storage
 
-Technical Implementation Architecture & Development Language: Kotlin
+## 🛠️ Technical Implementation
 
-IDE: Android Studio
+### Architecture & Development
+- **Language**: Kotlin
+- **IDE**: Android Studio
+- **Architecture**: MVVM (Model-View-ViewModel)
+- **Database**: Firebase Firestore (NoSQL), RoomDB for offline storage
 
-Architecture: MVVM (Model-View-ViewModel)
+### API Integration
+- **WeatherAPI.com**: Real-time weather data and forecasts
+- **Firebase Authentication**: Secure user management
+- **Firebase Firestore**: User data and preferences storage
+- **Firebase Cloud Messaging**: Push notifications
 
-API Integration: RESTful weather API consumption
+### External Libraries
+- `Firebase Authentication & Firestore` - Backend services
+- `Retrofit` - RESTful API calls
+- `Glide` - Image loading and caching
+- `Room Database` - Local data persistence
+- `Material Design Components` - Modern UI elements
+- `WorkManager` - Background synchronization
 
-Security Password encryption using Firebase Authentication
+## 🚀 Installation & Setup
 
-Secure data transmission
+### Prerequisites
+- Android Studio Arctic Fox or later
+- Physical Android device (required for final testing)
+- Firebase project setup
 
-External Libraries Used Firebase Authentication & Firestore
-
-Retrofit for API calls
-
-Glide for image loading
-
-Material Design components
-
-Testing & Quality Assurance Automated Testing The app includes comprehensive unit testing for:
-
-User registration functionality
-
-Weather data fetching and API integration
-
-User authentication processes
-
-Settings configuration
-
-GitHub Actions CI/CD This project uses GitHub Actions for continuous integration:
-
-Automated builds on every push
-
-Unit test execution
-
-Build verification across different environments
-
-Installation & Setup Clone the repository
-
-Open in Android Studio
-
-Configure Firebase by adding google-services.json file
-
-Set up Firebase Authentication and Firestore
-
-Build and run the project
-
-API Integration The app connects to:
-
-Firebase Authentication for user management
-
-Weather API for weather data
-
-Firestore for user data storage
-
-Demonstration Video A demonstration video is available showing:
-
-User registration and login process
-
-Weather data display and functionality
-
-Settings configuration
-
-Data storage in Firebase console
-
-API integration working
-
-Future Features (POE) Single Sign-On (SSO) integration
-
-Offline mode with synchronization
-
-Real-time push notifications
-
-Multi-language support (including South African languages)
-
-Development Notes Code Quality Comprehensive code commenting throughout
-
-Strategic logging implementation for debugging
-
-Clean architecture principles followed
-
-Material Design guidelines adhered to
-
-Challenges Overcome Secure authentication implementation
-
-API integration and error handling
-
-Responsive UI design
-
-Data persistence and synchronization
-
-1. Login Screen 🔐
-Secure user authentication with Firebase
-Email/password login and registration
-Input validation and error handling
-Automatic login persistence
-2. Main Weather Dashboard 🌡️
-Current Weather Display: Temperature, conditions, location
-Weather Details: Humidity, wind speed, feels-like temperature
-Quick Actions: One-tap access to all features
-User Info: Display logged-in user email
-Real-time Data: Live weather updates from WeatherAPI.com
-3. Locations Screen 📍
-Multiple Cities: Johannesburg, Cape Town, Pretoria, Durban
-Temperature Overview: Current temps for all locations
-Easy Navigation: Quick switching between cities
-My Locations: Personalized location management
-4. 10-Day Forecast 📅
-Extended Forecast: 10-day weather predictions
-Daily Overview: High/low temperatures per day
-Visual Layout: Clean, easy-to-read forecast display
-Detailed Planning: Perfect for trip planning
-5. Air Quality Index 🌫️
-AQI Monitoring: Real-time air quality data
-Health Recommendations: Safety tips based on AQI levels
-Color-coded Alerts: Visual indicators for air quality
-Moderate Level Handling: Special warnings for sensitive groups
+### Installation Steps
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/SAWeather-OPSC6312.git
