@@ -1,19 +1,18 @@
-import org.gradle.kotlin.dsl.implementation
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
+    id("kotlin-kapt")
 }
 
 android {
     namespace = "com.example.saweather"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.saweather"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -29,44 +28,66 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+
+    kotlin {
+        jvmToolchain(11)
+    }
+
+    // Disable test build types to avoid kapt issues
+    buildFeatures {
+        buildConfig = false
     }
 }
 
 dependencies {
+    // Android Core
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.10.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.activity:activity-ktx:1.8.0")
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.androidx.core.ktx.v170)
-    implementation(libs.androidx.appcompat.v161)
-    implementation(libs.material.v180)
-    implementation(libs.androidx.constraintlayout.v214)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.activity.ktx)
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
+    // Room Database
+    implementation("androidx.room:room-runtime:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
+    kapt("androidx.room:room-compiler:2.6.0")
 
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.firestore)
-// For Google Sign-In (optional)
-    implementation(libs.play.services.auth)
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    implementation(platform(libs.firebase.bom.v3270))
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.firestore.ktx)
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-messaging")
 
-    implementation(libs.androidx.core.splashscreen)
+    // Firebase Messaging for push notifications
+    implementation("com.google.firebase:firebase-messaging:23.4.0")
+
+    // Preferences
+    implementation("androidx.preference:preference-ktx:1.2.1")
+
+    // Google Sign-In
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+    // Splash Screen
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
+    // WorkManager for scheduled notifications
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+
+    // REMOVE ALL TEST DEPENDENCIES TEMPORARILY
+    // testImplementation("junit:junit:4.13.2")
+    // androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    // androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

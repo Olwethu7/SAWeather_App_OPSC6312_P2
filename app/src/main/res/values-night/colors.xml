@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="weather_bg">#1E1E1E</color>
+    <color name="weather_primary">#BB86FC</color>
+    <color name="weather_card">#2D2D2D</color>
+    <color name="weather_text">#FFFFFF</color>
+    <color name="weather_accent">#03DAC5</color>
+
+    <color name="splash_background">#1E1E1E</color>
+</resources>

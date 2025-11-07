@@ -14,15 +14,6 @@
     <color name="weather_card">#FFFFFF</color>
     <color name="weather_text">#000000</color>
     <color name="weather_accent">#000000</color>
-    <color name="weather_border">#000000</color>
-    <color name="weather_shadow">#000000</color>
-    <color name="weather_icon">#000000</color>
-    <color name="weather_text_shadow">#000000</color>
-    <color name="weather_text_accent">#000000</color>
-    <color name="weather_text_primary">#000000</color>
-    <color name="weather_text_secondary">#000000</color>
-    <color name="weather_text_tertiary">#000000</color>
-    <color name="weather_text_quaternary">#000000</color>
 
-        <color name="splash_background">#4A90E2</color>
+    <color name="splash_background">#4A90E2</color>
 </resources>

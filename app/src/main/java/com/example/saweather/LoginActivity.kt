@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
@@ -18,18 +19,49 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
     private lateinit var registerTextView: TextView
+    private lateinit var googleSignInButton: Button
     private lateinit var preferences: Preferences
     private lateinit var auth: FirebaseAuth
     private lateinit var languageManager: LanguageManager
-    private lateinit var db: FirebaseFirestore  // Add Firestore
+    private lateinit var db: FirebaseFirestore
+    private lateinit var googleSignInHelper: GoogleSignInHelper
+
+    private val googleSignInLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            googleSignInHelper.handleSignInResult(
+                result.data,
+                onSuccess = {
+                    Toast.makeText(this, "Google Sign-In successful!", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                },
+                onFailure = { error ->
+                    Toast.makeText(this, error, Toast.LENGTH_LONG).show()
+                    "Login".also { loginButton.text = it }
+                    loginButton.isEnabled = true
+                    googleSignInButton.isEnabled = true
+                    "Sign in with Google".also { googleSignInButton.text = it }
+                }
+            )
+        } else {
+            // User canceled Google Sign-In
+            "Login".also { loginButton.text = it }
+            loginButton.isEnabled = true
+            googleSignInButton.isEnabled = true
+            "Sign in with Google".also { googleSignInButton.text = it }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Initialize Firebase and check authentication IMMEDIATELY
         auth = Firebase.auth
-        db = FirebaseFirestore.getInstance()  // Initialize Firestore
+        db = FirebaseFirestore.getInstance()
         preferences = Preferences(this)
+        googleSignInHelper = GoogleSignInHelper(this)
 
         // Initialize language manager
         languageManager = LanguageManager(this)
@@ -59,6 +91,7 @@ class LoginActivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordEditText)
         loginButton = findViewById(R.id.loginButton)
         registerTextView = findViewById(R.id.registerTextView)
+        googleSignInButton = findViewById(R.id.googleSignInButton)
 
         loginButton.setOnClickListener {
             loginUser()
@@ -66,6 +99,28 @@ class LoginActivity : AppCompatActivity() {
 
         registerTextView.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        googleSignInButton.setOnClickListener {
+            signInWithGoogle()
+        }
+    }
+
+    private fun signInWithGoogle() {
+        // Show loading state
+        "Signing in...".also { googleSignInButton.text = it }
+        googleSignInButton.isEnabled = false
+        loginButton.isEnabled = false
+
+        try {
+            val signInIntent = googleSignInHelper.getGoogleSignInClient().signInIntent
+            googleSignInLauncher.launch(signInIntent)
+        } catch (e: Exception) {
+            Toast.makeText(this, "Google Sign-In error: ${e.message}", Toast.LENGTH_LONG).show()
+            "Login".also { loginButton.text = it }
+            loginButton.isEnabled = true
+            "Sign in with Google".also { googleSignInButton.text = it }
+            googleSignInButton.isEnabled = true
         }
     }
 
@@ -91,6 +146,7 @@ class LoginActivity : AppCompatActivity() {
         // Show loading
         "Logging in...".also { loginButton.text = it }
         loginButton.isEnabled = false
+        googleSignInButton.isEnabled = false
 
         // Firebase Authentication
         auth.signInWithEmailAndPassword(email, password)
@@ -105,6 +161,7 @@ class LoginActivity : AppCompatActivity() {
                     // Login failed
                     "Login".also { loginButton.text = it }
                     loginButton.isEnabled = true
+                    googleSignInButton.isEnabled = true
                     Toast.makeText(
                         this,
                         "Login failed: ${task.exception?.message}",

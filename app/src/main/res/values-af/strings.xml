@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="weather_settings">Weer Instellings</string>
     <string name="app_name">SAWeer</string>
     <string name="welcome">Welkom</string>
     <string name="login">Teken In</string>
@@ -22,4 +24,21 @@
     <string name="english">Engels</string>
     <string name="zulu">Zoeloe (isiZulu)</string>
     <string name="afrikaans">Afrikaans</string>
+
+    <!-- Settings strings in Afrikaans -->
+    <string name="settings_title">Instellings</string>
+    <string name="notifications">Kennisgewings</string>
+    <string name="appearance">Voorkoms</string>
+    <string name="about">Oor</string>
+    <string name="enable_notifications">Aktiveer Kennisgewings</string>
+    <string name="receive_weather_updates_and_alerts">Ontvang weerkennisgewings en waarskuwings</string>
+    <string name="theme">Tema</string>
+    <string name="choose_app_theme">Kies app-tema</string>
+    <string name="temperature_unit">Temperatuur Eenheid</string>
+    <string name="choose_temperature_display_unit">Kies temperatuur eenheid</string>
+    <string name="update_frequency">Opdatering Frekwensie</string>
+    <string name="how_often_to_update_weather_data">Hoe gereeld om weergegewens op te dateer</string>
+    <string name="app_version">App Weergawe</string>
+    <string name="privacy_policy">Privaatheidsbeleid</string>
+    <string name="terms_of_service">Gebruiksvoorwaardes</string>
 </resources>
