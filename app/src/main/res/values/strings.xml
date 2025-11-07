@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SAWeather</string>
     <string name="welcome">Welcome</string>
@@ -22,4 +23,34 @@
     <string name="english">English</string>
     <string name="zulu">Zulu (isiZulu)</string>
     <string name="afrikaans">Afrikaans</string>
+
+    <string name="no_data_available">No weather data available</string>
+    <string name="no_data">No data</string>
+    <string name="action_refresh">Refresh</string>
+
+    <!-- Settings strings -->
+    <string name="settings_title">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="appearance">Appearance</string>
+    <string name="about">About</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="receive_weather_updates_and_alerts">Receive weather updates and alerts</string>
+    <string name="theme">Theme</string>
+    <string name="choose_app_theme">Choose app theme</string>
+    <string name="temperature_unit">Temperature Unit</string>
+    <string name="choose_temperature_display_unit">Choose temperature display unit</string>
+    <string name="update_frequency">Update Frequency</string>
+    <string name="how_often_to_update_weather_data">How often to update weather data</string>
+    <string name="app_version">App Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="weather_update">Weather Update</string>
+    <string name="new_weather_information_available">New weather information available</string>
+    <string name="weather_updates">Weather Updates</string>
+    <string name="channel_for_weather_notifications">Channel for weather notifications</string>
+    <string name="daily_weather_update">Daily Weather Update</string>
+    <string name="check_todays_weather_forecast">Check today\'s weather forecast</string>
+
+    <!-- Add this missing string -->
+    <string name="weather_settings">Weather Settings</string>
 </resources>

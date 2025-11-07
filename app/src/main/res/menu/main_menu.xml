@@ -3,6 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings_title"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:title="@string/action_refresh"
+        android:icon="@android:drawable/ic_menu_rotate"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_change_language"
         android:title="@string/change_language"
         android:icon="@android:drawable/ic_menu_edit"
@@ -19,5 +31,10 @@
         android:title="@string/logout"
         android:icon="@android:drawable/ic_lock_power_off"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_test_notification"
+        android:title="Test Notification"
+        app:showAsAction="never" />
 
 </menu>
